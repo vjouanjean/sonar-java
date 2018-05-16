@@ -37,8 +37,8 @@ public class UCFGTestFileGenerator {
     File testJarsDir = new File("target/test-jars/");
     SquidClassLoader squidClassLoader = new SquidClassLoader(Arrays.asList(testJarsDir.listFiles()));
 
-    File root = new File("../../../../sonar-security/sonar-security-plugin/src/test/resources");
-    String filename = "S2076.java";
+    File root = new File("src/test/resources/security/");
+    String filename = "S2078.java";
     File file = new File(root, filename);
 
     UCFGJavaVisitor generator = new UCFGJavaVisitor(root);

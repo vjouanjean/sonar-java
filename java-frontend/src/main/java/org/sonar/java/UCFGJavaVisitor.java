@@ -121,7 +121,7 @@ public class UCFGJavaVisitor extends BaseTreeVisitor implements JavaFileScanner 
   }
 
   private String filePath() {
-    String absolutePath = new File(protobufDirectory, "ucfg_" + index + ".proto").getAbsolutePath();
+    String absolutePath = new File(protobufDirectory, "ucfg_" + fileKey + "_" + index + ".proto").getAbsolutePath();
     index++;
     return absolutePath;
   }
