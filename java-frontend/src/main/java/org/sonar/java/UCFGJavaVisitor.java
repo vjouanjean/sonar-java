@@ -339,8 +339,8 @@ public class UCFGJavaVisitor extends BaseTreeVisitor implements JavaFileScanner 
     return isString(var.type().symbolType());
   }
 
-  private static boolean isString(Type type) {
-    return type.is("java.lang.String");
+  private static boolean isString(@Nullable Type type) {
+    return type != null && type.is("java.lang.String");
   }
 
   public static class IdentifierGenerator {
